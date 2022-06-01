@@ -20,13 +20,23 @@
 
     <div id='bchave'>
         <h3>Digite a chave que deseja usar na codificação:</h3>
-        <input type='text' id='ichave'>
+        <input type='number' id='ichave'>
 
 
     </div>
-    <button onclick='codificar()'>Codificar</button>
+
+    <div id='botoes'>
+    <button id = 'codificar'onclick='codificar()'>Codificar</button>
+    <button id='limpar' onclick ="limpar()">Limpar</button>
+    </div>
+
+
     <script src='caesar.js'></script>
-    <p id='resultado'></p>
+    <hr>
+    <p id='result'>Cifra</p>
+    <div id = "código">
+
+    </div>
 
 </body>
-</html>
+</html> 
