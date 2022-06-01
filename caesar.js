@@ -1,26 +1,40 @@
-var alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 //Pegando os input de ichave e ijanel:
+var alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 var chave = document.getElementById("ichave")//chave
 var palavra = document.getElementById("ipalavra")//palavra
-var res = document.getElementById("resultado")//resultado(A cifra)
-var resposta = '';
+var chave = document.getElementById("ichave")//chave
+var resultado = document.getElementById("resultado")//resultado(A cifra)
+var cifra = document.getElementById("código")
+var cifra = ''
+var novaChave = chave.value
 
 function codificar(){
-    for (letrap of palavra.value) {
+    for (letrap of palavra.value.toLowerCase()) {
         //console.log(letrap)
-        for(letraa in alfabeto) {
-            if (alfabeto[letraa] == letrap){
-                //console.log(Number(letraa)+1)
-                //console.log(Number(letraa)+1+Number(chave.value))
-                console.log(alfabeto[Number(letraa)+Number(chave.value)])
-                 resposta += alfabeto[Number(letraa)+Number(chave.value)]
-                 console.log(resposta)
-                 
-            }
-        }
+            for (letra in alfabeto){
+                if(alfabeto[letra]==letrap){
+                    if(chave.value>25 ){
+                        novaChave = chave.value%26
+                    }
+
+                //console.log(Number(letra) + 1)
+                //console.log(Number(letra)+Number(chave.value)+1)
+                console.log(alfabeto[Number(letra)+Number(novaChave)])
+                cifra += alfabeto[Number(letra)+Number(novaChave)]//nova palavra
+                
+                }
+               
+        }    
     }
-    chave.value = ''
-    palavra.value = ''
+    console.log(cifra)
+    result.innerText = cifra
+    //
+    cifra = ''
     
+}
+function limpar(){
+    palavra.value = ''
+    chave.value = ''
+    result.innerText = "Cifra"
 }
 
