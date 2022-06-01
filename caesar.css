@@ -1,0 +1,32 @@
+h1{text-align: center;}
+body{background-color: cyan;
+color:black;}
+h2{text-align: center;}
+#código{
+    text-align: center;
+}
+
+#bpalavra{text-align: center;margin-top: 60px;}
+#bchave{text-align: center;margin-top:50px;
+margin-bottom: 30px;}
+#botoes{
+    margin-left:44%
+}
+button{
+display:inline-flex;
+width:75px;
+height: 25px;
+text-align: center;
+border-radius: 8px;
+cursor: pointer;
+font-size:15px;
+}
+#limpar{
+    width:65px;
+    border-radius:8px;
+}
+#result{
+    color:black;
+    text-align:center;
+    font-size: 22px;
+}
